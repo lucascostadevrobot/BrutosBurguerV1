@@ -32,7 +32,7 @@ background-color:rgb(240, 237, 80);
 `;
 
 export const ImagemCard = styled.img`
-    width: 300px;
+    width: 200px;
 `;
 
 export const TituloBurguerCard = styled.h3`
