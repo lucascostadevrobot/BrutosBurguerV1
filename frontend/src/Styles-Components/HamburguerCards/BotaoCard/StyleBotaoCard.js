@@ -18,6 +18,12 @@ export const StyleBotaoCard = styled.button`
     border-radius: 7px; /* Adiciona bordas arredondadas ao botão */
     font-size: 20px;
     padding: 5px;
+    border: 2px;
+    box-shadow: 0px 0.3rem 0px #dcdcdc;
+    margin-left: 10px;
+
+
+
 
     //Inicialização dos efeitos com Hover
     transition: all 0.3s ease; /* Transição suave para todas as propriedades */

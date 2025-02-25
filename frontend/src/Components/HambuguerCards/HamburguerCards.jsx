@@ -1,4 +1,4 @@
-import { CardContainer, ImagemCard, TituloBurguerCard } from "../../Styles-Components/HamburguerCards/SytaleHamburguerCards.js";
+import { CardContainer, ImagemCard, TituloBurguerCard, DescricaoBurguerCard } from "../../Styles-Components/HamburguerCards/SytaleHamburguerCards.js";
 import CarregandoCards from './LoadingCards/LoadingCards.jsx';
 import ImagemLoadingCards from "./LoadingCards/ImagemLoadingCards.jsx";
 import BotaoCard from "./BotaoCard/BotaoCard.jsx"
@@ -53,7 +53,7 @@ function HamburguerCards() {
                         <CardContainer key={index} style={{ width: '18rem' }}>
                             <ImagemCard src={imageCardFriboi}></ImagemCard>
                             <TituloBurguerCard>{dadosApiBurguers.titulo_burguer}</TituloBurguerCard>
-                            <p>{dadosApiBurguers.descricao_burguer}</p>
+                            <DescricaoBurguerCard>{dadosApiBurguers.descricao_burguer}</DescricaoBurguerCard>
                             <BotaoCard></BotaoCard>
                         </CardContainer>
                     ))

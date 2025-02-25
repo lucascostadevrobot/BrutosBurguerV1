@@ -38,3 +38,8 @@ export const ImagemCard = styled.img`
 export const TituloBurguerCard = styled.h3`
     padding: 0%;
 `;
+
+export const DescricaoBurguerCard = styled.p`
+    font-size: 1.2rem;
+    padding: 0%;
+`;

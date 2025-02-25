@@ -1,4 +1,5 @@
 import { Container, Button, FrasePrincipalHome } from "../../Styles-Components/header/header";
+import Navar from "../Navbar/Navbar";
 import { useState } from "react";
 
 const Header = () => { 
@@ -7,12 +8,12 @@ const Header = () => {
         setTextoBotao("Você abriu o Cardápio");
 }
 
-
-    //Funcoes com responsabilidades
     
 
     return (
-        <Container>
+        <>
+           <Navar/>
+           <Container>
             <h1>Calma ai, vai ir embora mesmo?</h1>
             <FrasePrincipalHome>Seu jeito de olhar, eu me lembro bem</FrasePrincipalHome>
             <FrasePrincipalHome>"Fico querendo sentir o seu cheiro</FrasePrincipalHome>
@@ -20,7 +21,10 @@ const Header = () => {
             <FrasePrincipalHome>O tempo todo eu fico feito tonto :)"</FrasePrincipalHome>
             <p></p>
             <Button onClick={mudarTextoBotao}>{formaAtualBotao}</Button>
-        </Container>
+            </Container>
+        </>
+       
+   
     );
 }
 
