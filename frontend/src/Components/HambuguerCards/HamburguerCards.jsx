@@ -1,10 +1,11 @@
 import { CardContainer, ImagemCard, TituloBurguerCard } from "../../Styles-Components/HamburguerCards/SytaleHamburguerCards.js";
-import CarregandoCards from '../../Components/LoadingCards/LoadingCards.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import CarregandoCards from './LoadingCards/LoadingCards.jsx';
+import ImagemLoadingCards from "./LoadingCards/ImagemLoadingCards.jsx";
+import BotaoCard from "./BotaoCard/BotaoCard.jsx"
 import imageCardFriboi from "../img/image-card-friboi.png";
-import imageSalsichaTriste from "../img/salsicha-triste.png";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
-import Button from 'react-bootstrap/Button';
 
 function HamburguerCards() {
     const BASE_URL = 'http://localhost:8080/api/v1/dadosBurguer/listarDadosBurguer';
@@ -40,7 +41,7 @@ function HamburguerCards() {
 
         // Limpa o timeout caso a API retorne antes do tempo limite
         return () => clearTimeout(tempoCarregamentoApi);
-    }, []);  // O useEffect agora é executado pelo menos uma vez quando o componente é montado
+    }, [loading]);  // O useEffect agora é executado pelo menos uma vez quando o componente é montado
 
     return (
         <>
@@ -53,12 +54,14 @@ function HamburguerCards() {
                             <ImagemCard src={imageCardFriboi}></ImagemCard>
                             <TituloBurguerCard>{dadosApiBurguers.titulo_burguer}</TituloBurguerCard>
                             <p>{dadosApiBurguers.descricao_burguer}</p>
-                            <Button variant="dark">Botão do CardLanche</Button>
+                            <BotaoCard></BotaoCard>
                         </CardContainer>
                     ))
                 ) : (
                     <div>
-                        <img src= {imageSalsichaTriste}/>
+                        <ImagemLoadingCards>
+
+                        </ImagemLoadingCards>
                         <p>Não há dados disponíveis...Contate o administrador!</p>
                     </div>
                 )

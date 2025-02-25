@@ -4,7 +4,6 @@ export const CardContainer = styled.div`
 width: 100%;
 height: 100% !important;
 margin: 40px;
-
 border: 2px;
 border-radius: 10px;
 box-shadow: 0px 0.4rem 0px #dcdcdc;
@@ -12,6 +11,7 @@ padding: 1.9rem !important;
 flex-direction: column !important;
 display: flex !important;
 background-color:rgb(240, 237, 80);
+color: rgb(29, 36, 73);
 
     //Inicialização dos efeitos com Hover
     transition: all 0.3s ease; /* Transição suave para todas as propriedades */
