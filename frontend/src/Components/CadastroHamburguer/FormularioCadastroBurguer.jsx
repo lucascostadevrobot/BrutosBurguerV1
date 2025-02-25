@@ -1,6 +1,5 @@
 import { StyleFormularioCadastroCardBurguer } from
     '../../Styles-Components/HamburguerCards/StyleFormularioCadastroCardBurguer/StyleFormularioCadastroCardBurguer.js';
-
 import { useState, useEffect } from 'react';
 
 
@@ -62,13 +61,16 @@ function FormularioCadastroCardHamburguer() {
                 <form>
                     <label>Nome do Hamburguer</label>
                     <input type="text" placeholder="Digite aqui o título do seu hamburguer"
-                        value={envioDadosHamburguerApi.nome} />
+                        value={envioDadosHamburguerApi.nome} 
+                        onChange={handleChange}/>
                     <label>Descrição</label>
                     <input type="text" placeholder="Descrição do seu hamburguer"
-                        value={envioDadosHamburguerApi.descricao} />
+                        value={envioDadosHamburguerApi.descricao} 
+                        onChange={handleChange}/>
                     <label>Enviar imagem do card</label>
                     <input type="imagem" placeholder="Imagem"
-                        value={envioDadosHamburguerApi.imagem} />
+                        value={envioDadosHamburguerApi.imagem} 
+                        onChange={handleChange}/>
                     <button type="submit">Cadastrar</button>
                 </form>
             </ StyleFormularioCadastroCardBurguer>
