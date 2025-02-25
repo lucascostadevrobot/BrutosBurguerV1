@@ -27,7 +27,7 @@ export const StyleFormularioCadastroCardBurguer = styled.form`
         font-size: 20px;
     }
     button{
-        width: 100%;
+    width: 100%;
     height: 100%;
     background-color: black;
     color: white;
@@ -38,6 +38,7 @@ export const StyleFormularioCadastroCardBurguer = styled.form`
     border: 2px;
     box-shadow: 0px 0.3rem 0px #dcdcdc;
     margin-left: 10px;
+    margin-top: 20px;
 
 
 
