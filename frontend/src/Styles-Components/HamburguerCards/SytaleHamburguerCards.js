@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
 width: 100%;
 height: 100% !important;
-margin: 40px;
-border: 2px;
+margin: 2px;
+border: 5px;
 border-radius: 10px;
 box-shadow: 0px 0.4rem 0px #dcdcdc;
 padding: 1.9rem !important;
@@ -40,6 +40,15 @@ export const TituloBurguerCard = styled.h3`
 `;
 
 export const DescricaoBurguerCard = styled.p`
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    position: relative;
     padding: 0%;
+    overflow: hidden;
+    max-width: 100%;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+  
 `;
