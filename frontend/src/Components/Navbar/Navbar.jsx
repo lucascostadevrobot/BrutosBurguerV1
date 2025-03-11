@@ -1,6 +1,7 @@
 import { TabMenu } from 'primereact/tabmenu';
 import { useState } from 'react';
 import  { useNavigate } from 'react-router-dom';
+import StylePrimeReact from '../../Styles-Components/SytlePrimeReact/StylePrimeReact.css';
 
 
 // Importando os estilos do PrimeReact
@@ -30,7 +31,7 @@ function ComponenteNavBar() {
     <>
       <TabMenu model={modelItems}
         activeIndex={activeIndex}
-        onTabChange={(e) => setActiveIndex(e.index)} />
+        onTabChange={(e) => setActiveIndex(e.index)} style={StylePrimeReact} />
     </>
 
   );
