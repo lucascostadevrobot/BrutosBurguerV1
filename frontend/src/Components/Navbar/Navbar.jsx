@@ -21,7 +21,7 @@ function ComponenteNavBar() {
   const modelItems = [
     { label: 'Home', icon: 'pi pi-fw pi-home', command: () => navigate('/') }, 
     { label: 'Sobre', icon: 'pi pi-fw pi-info', command: () => navigate('/about') },
-    { label: 'Cardápio', icon: 'pi pi-fw pi-cog', command: () => navigate('/menu') },
+    { label: 'Cardápio', icon: 'pi pi-fw pi-shopping-cart', command: () => navigate('/menu') },
     { label: 'Contato', icon: 'pi pi-fw pi-envelope', command: () => navigate('/contact') },
     { label: 'Admin', icon: 'pi pi-fw pi-user', command: () => navigate("/CadastrarHamburguer") },
   ]
