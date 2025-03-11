@@ -41,6 +41,7 @@ function FormularioCadastroCardHamburguer() {
         // Se necessário, o envio pode ser feito aqui também, mas vamos usar o onSubmit para um controle mais preciso
     }, [envioDadosHamburguerApi]);
 
+    
       /**
      * [Linha] - Criamos a função handleChange para capturar e lidar com  as alterações nos campos do formulário
      */

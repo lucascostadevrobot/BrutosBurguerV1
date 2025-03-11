@@ -1,5 +1,4 @@
 import { Container, Button, FrasePrincipalHome } from "../../Styles-Components/header/header";
-import Navar from "../Navbar/Navbar";
 import { useState } from "react";
 
 const Header = () => {

@@ -3,6 +3,8 @@ import CarregandoCards from './LoadingCards/LoadingCards.jsx';
 import ImagemLoadingCards from "./LoadingCards/ImagemLoadingCards.jsx";
 import BotaoCard from "./BotaoCard/BotaoCard.jsx"
 import imageCardFriboi from "../img/image-card-friboi.png";
+import { Carousel } from 'primereact/carousel';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
@@ -10,7 +12,7 @@ import { useState, useEffect } from "react";
 function HamburguerCards() {
     const BASE_URL = 'http://localhost:8080/api/v1/dadosBurguer/listarDadosBurguer';
     const [dadosApiBurguers, setDadosApiBurguers] = useState([]);
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
     const [loadingMessage, setLoadingMessage] = useState("Carregando...");
 
     useEffect(() => {
@@ -43,20 +45,31 @@ function HamburguerCards() {
         return () => clearTimeout(tempoCarregamentoApi);
     }, [loading]);  // O useEffect agora é executado pelo menos uma vez quando o componente é montado
 
+
+    //Separa uma função para renderizar os itens do carrossel
+    const itemsCarroseulTemplate = (dadosApiBurguers) => {
+        return (
+            <CardContainer style={{ width: '18rem' }}>
+                <ImagemCard src={imageCardFriboi}></ImagemCard>
+                <TituloBurguerCard>{dadosApiBurguers.titulo_burguer}</TituloBurguerCard>
+                <DescricaoBurguerCard>{dadosApiBurguers.descricao_burguer}</DescricaoBurguerCard>
+                <BotaoCard></BotaoCard>
+            </CardContainer>
+        );
+    }
+
     return (
         <>
             {loading ? (
                 <CarregandoCards>{loadingMessage}</CarregandoCards>
             ) : (
                 dadosApiBurguers.length > 0 ? (
-                    dadosApiBurguers.map((dadosApiBurguers, index) => (
-                        <CardContainer key={index} style={{ width: '18rem' }}>
-                            <ImagemCard src={imageCardFriboi}></ImagemCard>
-                            <TituloBurguerCard>{dadosApiBurguers.titulo_burguer}</TituloBurguerCard>
-                            <DescricaoBurguerCard>{dadosApiBurguers.descricao_burguer}</DescricaoBurguerCard>
-                            <BotaoCard></BotaoCard>
-                        </CardContainer>
-                    ))
+                        <Carousel 
+                        value={dadosApiBurguers} 
+                        itemTemplate={itemsCarroseulTemplate}
+                        numVisible={3}  // Mostra 3 itens ao mesmo tempo
+                        >
+                        </Carousel>
                 ) : (
                     <div>
                         <ImagemLoadingCards>

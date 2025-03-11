@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 /*Estilização global do Formulario com a tag Form*/
 export const StyleFormularioCadastroCardBurguer = styled.form`
-    display: flex;
-    flex-direction: column;     
+    width: 50%;
+    display: flex;  
     align-items: center;
     justify-content: center;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 20%;
     margin-right: 5%;
     margin-bottom: 5%;
     padding: 5%;
