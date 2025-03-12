@@ -67,7 +67,7 @@ function HamburguerCards() {
                         <Carousel 
                         value={dadosApiBurguers} 
                         itemTemplate={itemsCarroseulTemplate}
-                        numVisible={3}  // Mostra 3 itens ao mesmo tempo
+                        numVisible={4}  // Mostra 3 itens ao mesmo tempo
                         >
                         </Carousel>
                 ) : (

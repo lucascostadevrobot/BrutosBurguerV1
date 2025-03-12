@@ -9,6 +9,7 @@ export const Container = styled.div`
     height: 100%;
     padding: 20px; /* Adiciona um pouco de espaçamento */
     background-color: black;
+    margin-top: -15px;
 
 `;
 
