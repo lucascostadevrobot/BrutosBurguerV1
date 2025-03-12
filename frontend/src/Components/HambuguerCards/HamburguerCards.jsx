@@ -2,7 +2,7 @@ import { CardContainer, ImagemCard, TituloBurguerCard, DescricaoBurguerCard } fr
 import CarregandoCards from './LoadingCards/LoadingCards.jsx';
 import ImagemLoadingCards from "./LoadingCards/ImagemLoadingCards.jsx";
 import BotaoCard from "./BotaoCard/BotaoCard.jsx"
-import imageCardFriboi from "../img/image-card-friboi.png";
+import imageCardFriboi from "../../assets/img/image-card-friboi.png";
 import { Carousel } from 'primereact/carousel';
 
 

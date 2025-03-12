@@ -1,4 +1,4 @@
-import imageSalsichaTriste from "../../img/salsicha-triste.png";
+import imageSalsichaTriste from "../../../assets/img/salsicha-triste.png";
 import {StyleImagemLoadingCards} from '../../../Styles-Components/LoadingCards/StyleImagemLoadingCards'
 
 

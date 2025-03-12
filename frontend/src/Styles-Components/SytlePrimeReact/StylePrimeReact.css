@@ -10,3 +10,7 @@
     flex-wrap: nowrap !important;
     flex-direction: row !important;
 }
+
+.p-menuitem-text{
+    color: black !important;
+}
