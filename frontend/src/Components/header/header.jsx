@@ -1,7 +1,9 @@
 import { Container, Button, FrasePrincipalHome } from "../../Styles-Components/header/header";
 import { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import gif from '../../../src/assets/resource/giphy.gif';
+import ComponentSliderHeader from "../SlideHeader/SliderHeader";
+import Imagem01 from '../../assets/img/imagem01Slide.png'
+
 
 
 
@@ -19,21 +21,21 @@ const Header = () => {
             <Container>
                 <Carousel>
                     <Carousel.Item>
-                        <img src={gif} text="First slide" />
+                        <ComponentSliderHeader />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src={gif} text="Second slide" />
+                        <ComponentSliderHeader/>
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src={gif} text="Third slide" />
+                        <ComponentSliderHeader  />
                         <Carousel.Caption>
                             <h3>Third slide label</h3>
                             <p>
