@@ -10,6 +10,7 @@ export const Container = styled.div`
     padding: 20px; /* Adiciona um pouco de espaçamento */
     background-color: black;
     margin-top: -15px;
+    background-color: white;
 
 `;
 
@@ -17,7 +18,7 @@ export const Container = styled.div`
 export const Cabecalho = styled.header`
     width: auto;
     height: auto;
-    background-color: rgb(20, 20, 20); /* Corrigido o erro de 'rgbrgb' para 'rgb' */
+    background-color: rgb(241, 241, 241); /* Corrigido o erro de 'rgbrgb' para 'rgb' */
     color: #c68d22;
     display: block;
     padding: 10px;
@@ -39,7 +40,7 @@ export const FotoPerfil = styled.img`
 `;
 
 export const Button = styled.button`
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 114, 48);
     color: rgb(29, 36, 73);
     width: 200px;
     height: 40px;

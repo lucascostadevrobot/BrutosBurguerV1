@@ -1,8 +1,12 @@
-import { Container, Button, FrasePrincipalHome } from "../../Styles-Components/header/header";
+import { Container, Button } from "../../Styles-Components/header/header";
 import { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import ComponentSliderHeader from "../SlideHeader/SliderHeader";
-import Imagem01 from '../../assets/img/imagem01Slide.png'
+import Imagem01 from "../../assets/img/imagem01Slide.png";
+import Imagem02 from "../../assets/img/imagem02Slide.png";
+import Imagem03 from "../../assets/img/imagem03Slide.png";
+import { SliderContainer } from '../../Styles-Components/SliderHeader/StyledSliderHeader.js';
+
+
 
 
 
@@ -21,26 +25,27 @@ const Header = () => {
             <Container>
                 <Carousel>
                     <Carousel.Item>
-                        <ComponentSliderHeader />
+                        <SliderContainer src={Imagem01} alt="Imagem Lanche" className="d-block w-100">
+
+                        </SliderContainer>
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <ComponentSliderHeader/>
+                        <SliderContainer src={Imagem02} alt="Imagem Lanche"  className="d-block w-100">
+
+                        </SliderContainer>
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <ComponentSliderHeader  />
+                        <SliderContainer img src={Imagem03} alt="Imagem Lanche" className="d-block w-100">
+
+                        </SliderContainer>
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
