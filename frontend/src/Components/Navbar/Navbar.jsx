@@ -24,7 +24,7 @@ function ComponenteNavBar() {
     { label: 'Sobre', icon: 'pi pi-fw pi-info', command: () => navigate('/about') },
     { label: 'Cardápio', icon: 'pi pi-fw pi-shopping-cart', command: () => navigate('/menu') },
     { label: 'Contato', icon: 'pi pi-fw pi-envelope', command: () => navigate('/contact') },
-    { label: 'Admin', icon: 'pi pi-fw pi-user', command: () => navigate("/CadastrarHamburguer") },
+    { label: 'Área do Cliente', icon: 'pi pi-fw pi-user', command: () => navigate("/login") },
   ]
 
   return (
