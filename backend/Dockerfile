@@ -1,13 +1,13 @@
 FROM ubuntu:latest AS build
 
 RUN apt-get update
-RUN apt-get install openjdk-17-jdk maven -y
+RUN apt-get install openjdk-23-jdk maven -y
 
-WORKDIR /app  # define a pasta de trabalho
+WORKDIR /app
 
-COPY . .       # copia tudo da raiz do projeto (onde está o Dockerfile)
+COPY . .
 
-RUN mvn clean install -f pom.xml  # especifica explicitamente o pom.xml
+RUN mvn clean install -f pom.xml
 
 FROM openjdk:23-jdk-slim
 
