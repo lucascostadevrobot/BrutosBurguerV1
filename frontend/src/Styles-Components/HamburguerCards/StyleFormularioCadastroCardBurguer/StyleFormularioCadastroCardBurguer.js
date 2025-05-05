@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 /*Estilização global do Formulario com a tag Form*/
 export const StyleFormularioCadastroCardBurguer = styled.form`
-    width: 50%;
+    width: auto;
     display: flex;  
     align-items: center;
     justify-content: center;
