@@ -6,12 +6,7 @@ RUN apt-get update && apt-get install -y openjdk-17-jdk maven
 # criamos uma pasta e defina como diretório de trabalho
 WORKDIR /app
 
-# copia apenas os arquivos necessários (isso ajuda no cache)
-COPY pom.xml .
-COPY src ./src
-COPY .mvn .mvn
-COPY mvnw .
-COPY mvnw.cmd .
+COPY . .
 
 # Usamos o wrapper do Maven, que é mais seguro e controlado
 RUN ./mvnw clean package -DskipTests
