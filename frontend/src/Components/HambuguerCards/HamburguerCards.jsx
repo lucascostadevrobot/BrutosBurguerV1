@@ -39,7 +39,7 @@ function HamburguerCards() {
                 setLoadingMessage("Erro: Sua API demorou muito para responder");
                 setLoading(false); // Finaliza o carregamento após tempo limite
             }
-        }, 2000); // Timeout de 2 segundos
+        }, 5000); // Timeout de 2 segundos
 
         // Limpa o timeout caso a API retorne antes do tempo limite
         return () => clearTimeout(tempoCarregamentoApi);
