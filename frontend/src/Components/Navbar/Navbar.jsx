@@ -31,7 +31,7 @@ function ComponenteNavBar() {
   return (
   
     <div className="p-3 shadow-2 flex justify-between align-items-center">
-    <div className="font-bold text-xl">Brutos Burguer</div>
+    <div className="font-bold text-xl">Brutos Burguer Itaperuna</div>
     <div className="p-menubar">
 
       {isMobile ? (
