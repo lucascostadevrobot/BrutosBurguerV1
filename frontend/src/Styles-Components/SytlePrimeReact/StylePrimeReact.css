@@ -14,3 +14,10 @@
 .p-menuitem-text{
     color: black !important;
 }
+
+.p-menubar {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column-reverse !important;
+    margin-left: 55px !important;
+}

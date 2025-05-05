@@ -1,41 +1,64 @@
-import { TabMenu } from 'primereact/tabmenu';
-import { useState } from 'react';
-import  { useNavigate } from 'react-router-dom';
-import StylePrimeReact from '../../Styles-Components/SytlePrimeReact/StylePrimeReact.css';
-
-
-// Importando os estilos do PrimeReact
+import { useState, useEffect } from 'react';
+import { Menubar } from 'primereact/menubar';
+import { Sidebar } from 'primereact/sidebar';
+import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 
-
-
-
 function ComponenteNavBar() {
-  //Criando hook useState para controlar o componente do PrimeReact
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
 
-  //Funcao para passar os dados do objeto para o componente
-  const modelItems = [
-    { label: 'Home', icon: 'pi pi-fw pi-home', command: () => navigate('/') }, 
-    { label: 'Sobre', icon: 'pi pi-fw pi-info', command: () => navigate('/about') },
-    { label: 'Cardápio', icon: 'pi pi-fw pi-shopping-cart', command: () => navigate('/menu') },
-    { label: 'Contato', icon: 'pi pi-fw pi-envelope', command: () => navigate('/contact') },
-    { label: 'Área do Cliente', icon: 'pi pi-fw pi-user', command: () => navigate("/login") },
-  ]
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const items = [
+    { label: 'Home', icon: 'pi pi-home', command: () => navigate('/') },
+    { label: 'Sobre', icon: 'pi pi-info', command: () => navigate('/about') },
+    { label: 'Cardápio', icon: 'pi pi-shopping-cart', command: () => navigate('/menu') },
+    { label: 'Contato', icon: 'pi pi-envelope', command: () => navigate('/contact') },
+    { label: 'Área do Cliente', icon: 'pi pi-user', command: () => navigate('/login') },
+  ];
 
   return (
-    <>
-      <TabMenu model={modelItems}
-        activeIndex={activeIndex}
-        onTabChange={(e) => setActiveIndex(e.index)} style={StylePrimeReact} />
-    </>
+  
+    <div className="p-3 shadow-2 flex justify-between align-items-center">
+    <div className="font-bold text-xl">Brutos Burguer</div>
+    <div className="p-menubar">
 
+      {isMobile ? (
+        <>
+          <Button icon="pi pi-bars" onClick={() => setVisible(true)} className="p-button-text" />
+          <Sidebar visible={visible} onHide={() => setVisible(false)}>
+            <h2 className="mb-3">Menu</h2>
+            {items.map((item, idx) => (
+              <Button
+                key={idx}
+                label={item.label}
+                icon={item.icon}
+                className="p-button-text w-full mb-2"
+                onClick={() => {
+                  item.command();
+                  setVisible(false);
+                }}
+              />
+            ))}
+          </Sidebar>
+        </>
+      ) : (
+        <Menubar model={items} />
+      )}
+    </div>
+    </div>
   );
 }
 
 export default ComponenteNavBar;
-
