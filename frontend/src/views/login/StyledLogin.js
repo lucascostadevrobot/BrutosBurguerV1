@@ -7,7 +7,8 @@ export const StyledContainerFormulario = styled.form`
     align-items: center;
     padding: 40px;
     margin: auto;
-    background-color:rgb(255, 15, 15);
+    margin-top: 80px;
+    background-color:rgb(255, 83, 83);
 
     display: flex;
     justify-content: center;
@@ -18,20 +19,21 @@ export const StyledContainerFormulario = styled.form`
     border-radius: 10px;
 
     label{
-        color: bl;
+        color: white;
         font-size: 20px;
         font-weight: bold;
     }
     input{
         width: auto;
-        height: 30px;
+        height: 50px;
         margin-top: 1%;
         margin-bottom: 1%;
         font-size: 20px;
 
         border-radius: 5px;
         border: none;
-        background-color: rgb(41, 41, 41);;
+        color: white;
+        background-color: rgb(41, 41, 41);
     }
     button{
     width: 100%;
@@ -41,10 +43,15 @@ export const StyledContainerFormulario = styled.form`
     border: none; /* Remove a borda do botão */
     border-radius: 7px; /* Adiciona bordas arredondadas ao botão */
     font-size: 20px;
-    padding: 5px;
+    padding: 7px;
     border: 2px;
     box-shadow: 0px 0.3rem 0px #dcdcdc;
     margin-left: 10px;
     margin-top: 20px;
+    }
+
+    img{
+         margin-left: 80px;
+        width: 50px;
     }
 `;

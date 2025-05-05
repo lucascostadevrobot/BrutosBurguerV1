@@ -22,16 +22,15 @@ function ComponenteNavBar() {
 
   const items = [
     { label: 'Home', icon: 'pi pi-home', command: () => navigate('/') },
-    { label: 'Sobre', icon: 'pi pi-info', command: () => navigate('/about') },
-    { label: 'Cardápio', icon: 'pi pi-shopping-cart', command: () => navigate('/menu') },
-    { label: 'Contato', icon: 'pi pi-envelope', command: () => navigate('/contact') },
+    //{ label: 'Sobre', icon: 'pi pi-info', command: () => navigate('/about') },
+   { label: 'Cadastro Burguer', icon: 'pi pi-shopping-cart', command: () => navigate('/CadastroHamburguer') },
+   // { label: 'Contato', icon: 'pi pi-envelope', command: () => navigate('/contact') },
     { label: 'Área do Cliente', icon: 'pi pi-user', command: () => navigate('/login') },
   ];
 
   return (
   
     <div className="p-3 shadow-2 flex justify-between align-items-center">
-    <div className="font-bold text-xl">Brutos Burguer Itaperuna</div>
     <div className="p-menubar">
 
       {isMobile ? (

@@ -8,6 +8,7 @@ import NavBar from '../Navbar/Navbar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../../views/login/index.js'
 import { ThemeContext, themes } from '../../Styles-Components/Themes/ThemeContext.js'
+import CadastroHamburguer from '../CadastroHamburguer/CadastroCardHamburguer.jsx';
 
 
 
@@ -31,6 +32,9 @@ function App() {
             } />
             <Route path="/login" element={
               <Login />
+            } />
+              <Route path="/CadastroHamburguer" element={
+              <CadastroHamburguer />
             } />
           </Routes>
         </EstilizacaoGlobalBody>
