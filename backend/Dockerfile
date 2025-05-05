@@ -1,18 +1,16 @@
-FROM maven:3.9.4-eclipse-temurin-17 AS build
+FROM ubuntu:latest AS build
 
-WORKDIR /app
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
+COPY . .
 
-COPY pom.xml .
-COPY src ./src
+RUN apt-get install maven -y
+RUN MVN clean install
 
-RUN mvn clean install -DskipTests
-
-FROM eclipse-temurin:17-jdk-alpine
-
-WORKDIR /app
-
-COPY --from=build /app/target/*.jar app.jar
+FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
+
+COPY --from=build /target/backend-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
