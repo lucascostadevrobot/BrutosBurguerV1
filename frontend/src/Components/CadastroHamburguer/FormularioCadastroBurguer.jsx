@@ -13,6 +13,7 @@ function FormularioCadastroCardHamburguer() {
 
     const [visible, setVisible] = useState(false);
     const [position, setPosition] = useState('center');
+    const [formularioPreenchido, setFormularioPreenchido] = useState(null);
 
     /**
      * [Linha] - Tratamento dos dados com a API
@@ -65,17 +66,25 @@ function FormularioCadastroCardHamburguer() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Previne o comportamento padrão de submit (recarregar a página)
-        enviaDadosFormularioApi(); // Envia os dados para a API
-        if (handleSubmit) {
+
+        if ((!envioDadosHamburguerApi.titulo_burguer && !envioDadosHamburguerApi.descricao_burguer)
+            || (envioDadosHamburguerApi.titulo_burguer === '' && envioDadosHamburguerApi.descricao_burguer === '')) {
+            setFormularioPreenchido(false);
             setPosition(position);
             setVisible(true);
+
         } else {
-            alert("Ops!!! Houve um erro, tente cadastrar novamente.")
+            enviaDadosFormularioApi(); // Envia os dados para a API
+            setFormularioPreenchido(true);
+            setPosition(position);
+            setVisible(true);
         }
     }
+
     /**
      * [Linha] - Return padrão dos compoentes
      */
+
     return (
         <StyleFormularioCadastroCardBurguer>
             <form onSubmit={handleSubmit}>
@@ -98,21 +107,36 @@ function FormularioCadastroCardHamburguer() {
                 <button type="submit">Cadastrar</button>
             </form>
 
-            <Dialog header="Parabéns!!! Cadastrado com sucesso." visible={visible} position={position} style={{ width: '50vw' }}
-                onHide={() => {
-                    if (!visible) return; setVisible(false);
-                }
-                }
-                footer={botoesInferioresDialog}
-                draggable={false}
-                resizable={false}>
-                <p className="m-0">
-                    O seu hamburguer será mostrado na faixa de promoções especiais!!!
-                </p>
-            </Dialog>
+            {!formularioPreenchido ? (
+                <Dialog header="Opps!!" visible={visible} position={position} style={{ width: '50vw' }}
+                    onHide={() => {
+                        if (visible) return; setVisible(false);
+                    }
+                    }
+                    footer={botoesInferioresDialog}
+                    draggable={false}
+                    resizable={false}>
+                    <p className="m-0">
+                        Você não digitou os dados nos campos abaixo. Para continuar é necessário informar!
+                    </p>
+                </Dialog>
+            ) : (
+                <Dialog header="Parabéns!!! Cadastrado com sucesso." visible={visible} position={position} style={{ width: '50vw' }}
+                    onHide={() => {
+                        if (!visible) return; setVisible(false);
+                    }
+                    }
+                    footer={botoesInferioresDialog}
+                    draggable={false}
+                    resizable={false}>
+                    <p className="m-0">
+                        O seu hamburguer será mostrado na faixa de promoções especiais!!!
+                    </p>
+                </Dialog>
+            )
+            }
         </StyleFormularioCadastroCardBurguer>
-
-    )
+    );
 }
 
 export default FormularioCadastroCardHamburguer;
