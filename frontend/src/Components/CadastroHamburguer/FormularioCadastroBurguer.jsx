@@ -44,6 +44,9 @@ function FormularioCadastroCardHamburguer() {
     }, [envioDadosHamburguerApi]);
 
 
+     /**
+   * [Linha] - Botões inferiores do alert dialog que aparece ao utilizar formulario de cadastro.
+   */
     const botoesInferioresDialog = (
         <div>
             <Button label="Ok!" icon="pi pi-check" onClick={() => setVisible(false)} autoFocus />
@@ -107,6 +110,7 @@ function FormularioCadastroCardHamburguer() {
                 <button type="submit">Cadastrar</button>
             </form>
 
+           
             {!formularioPreenchido ? (
                 <Dialog header="Opps!!" visible={visible} position={position} style={{ width: '50vw' }}
                     onHide={() => {

@@ -6,10 +6,7 @@ export const StyleFormularioCadastroCardBurguer = styled.div`
     display: flex;  
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 5%;
-    margin-bottom: 5%;
+    margin: 100px;
     padding: 5%;
     border: 1px solid black;    
     border-radius: 10px;
