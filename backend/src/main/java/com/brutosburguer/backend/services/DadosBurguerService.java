@@ -6,13 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.http.ResponseEntity.status;
 
 @Service
 public class DadosBurguerService {
@@ -43,11 +42,24 @@ public class DadosBurguerService {
             dadosAtualizado.setTituloBurguer(dadosBurguerEntity.getTituloBurguer());
             dadosAtualizado.setDescricaoBurguer(dadosBurguerEntity.getDescricaoBurguer());
             exibirDadosBurguerRepository.save(dadosAtualizado);
-            return ResponseEntity.status(HttpStatus.OK).body(dadosAtualizado);
+            return status(HttpStatus.OK).body(dadosAtualizado);
         }else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return status(HttpStatus.NOT_FOUND).body(null);
         }
 
+    }
+
+    //Metodo para deletar um CardBurguer com base no id
+    public ResponseEntity<DadosBurguerEntity> deleteId(@PathVariable Long id){
+        Optional<DadosBurguerEntity> idEcontrado = exibirDadosBurguerRepository.findById(id);
+        if (idEcontrado.isPresent()){
+            DadosBurguerEntity dadosExcluidos = idEcontrado.get();
+            exibirDadosBurguerRepository.deleteById(dadosExcluidos.getId());
+            return status(HttpStatus.OK).body(dadosExcluidos);
+        }else {
+            //Id não encontrado
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
     }
 
 

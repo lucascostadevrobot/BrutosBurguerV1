@@ -40,6 +40,11 @@ public class ExibirDadosBurguerController {
         return ResponseEntity.status(HttpStatus.OK).body(dadosAtualizados);
     }
 
+    @DeleteMapping(value = "deletarBurguer/{id}")
+    public ResponseEntity<DadosBurguerEntity> deleteId(@PathVariable Long id){
+        return dadosBurguerService.deleteId(id);
+    }
+
     //Metodo Controller para testes inciais retornando uma String
     @GetMapping("/exibirDadosBurguer")
     public String exibindoDadosBurguer(){

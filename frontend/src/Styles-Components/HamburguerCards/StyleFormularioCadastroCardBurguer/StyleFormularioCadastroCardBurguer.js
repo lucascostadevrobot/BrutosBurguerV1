@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 /*Estilização global do Formulario com a tag Form*/
-export const StyleFormularioCadastroCardBurguer = styled.form`
+export const StyleFormularioCadastroCardBurguer = styled.div`
     width: auto;
     display: flex;  
     align-items: center;
