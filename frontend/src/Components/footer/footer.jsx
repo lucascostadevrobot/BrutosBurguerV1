@@ -1,4 +1,4 @@
-import { EstiloFooter } from '../../Styles-Components/footer/footer.js';
+import { EstiloFooter } from '../footer/footer';
 
 
 const Footer = () =>{

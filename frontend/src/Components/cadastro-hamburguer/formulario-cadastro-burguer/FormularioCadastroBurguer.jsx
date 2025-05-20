@@ -1,4 +1,4 @@
-import { StyleFormularioCadastroCardBurguer } from '../../Styles-Components/HamburguerCards/StyleFormularioCadastroCardBurguer/StyleFormularioCadastroCardBurguer.js';
+import { StyleFormularioCadastroCardBurguer } from '../formulario-cadastro-burguer/StyleFormularioCadastroCardBurguer';
 import { useState, useEffect } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';

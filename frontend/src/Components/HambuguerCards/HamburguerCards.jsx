@@ -1,4 +1,4 @@
-import { CardContainer, ImagemCard, TituloBurguerCard, DescricaoBurguerCard } from "../../Styles-Components/HamburguerCards/SytaleHamburguerCards.js";
+import { CardContainer, ImagemCard, TituloBurguerCard, DescricaoBurguerCard } from "./SytaleHamburguerCards.js";
 import CarregandoCards from './LoadingCards/LoadingCards.jsx';
 import ImagemLoadingCards from "./LoadingCards/ImagemLoadingCards.jsx";
 import BotaoCard from "./BotaoCard/BotaoCard.jsx"

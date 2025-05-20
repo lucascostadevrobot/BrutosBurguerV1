@@ -1,10 +1,10 @@
-import { Container, Button } from "../../Styles-Components/header/header";
+import { Container, Button } from "../header/header.js";
 import { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import Imagem01 from "../../assets/img/imagem01Slide.png";
 import Imagem02 from "../../assets/img/imagem02Slide.png";
 import Imagem03 from "../../assets/img/imagem03Slide.png";
-import { SliderContainer } from '../../Styles-Components/SliderHeader/StyledSliderHeader.js';
+import { SliderContainer } from './StyledSliderHeader.js';
 
 
 

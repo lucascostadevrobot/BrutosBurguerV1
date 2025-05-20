@@ -1,5 +1,5 @@
-import { StyleBotaoCard,StyleContainerBotaoCard } from "../../../Styles-Components/HamburguerCards/BotaoCard/StyleBotaoCard";
-import BotaoSacolaCompras from "../../BotaoSacolaCompras/BotaoSacolaCompras.jsx";
+import { StyleBotaoCard,StyleContainerBotaoCard } from "../BotaoCard/StyleBotaoCard";
+import BotaoSacolaCompras from "../../botao-sacola-compras/BotaoSacolaCompras";
 
 function BotaoCard (){
     return (

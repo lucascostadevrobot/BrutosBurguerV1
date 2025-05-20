@@ -4,11 +4,11 @@ import Header from '../header/header.jsx';
 import GifComponente from '../apresentacao/apresentacao.jsx';
 import Footer from '../footer/footer.jsx';
 import HamburguerCards from '../HambuguerCards/HamburguerCards.jsx';
-import NavBar from '../Navbar/Navbar.jsx';
+import NavBar from '../navbar/Navbar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../../views/login/index.js'
 import { ThemeContext, themes } from '../../Styles-Components/Themes/ThemeContext.js'
-import CadastroHamburguer from '../CadastroHamburguer/CadastroCardHamburguer.jsx';
+import CadastroHamburguer from '../cadastro-hamburguer/cadastro-card-burguer/CadastroCardHamburguer.jsx';
 
 
 

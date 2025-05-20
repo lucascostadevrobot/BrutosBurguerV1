@@ -1,4 +1,4 @@
-import { StyleBotaoSacolaCompras } from '../../Styles-Components/BotaoSacolaCompras/StyleBotaoSacolaCompras.js'
+import { StyleBotaoSacolaCompras } from '../botao-sacola-compras/stylebotaosacolacompras'
 import ImagemSacolaCompras from '../../assets/img/icon-sacola.png'
 
 function BotaoSacolaCompras() {

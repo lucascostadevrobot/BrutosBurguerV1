@@ -1,5 +1,5 @@
 import gif from '../../../src/assets/resource/giphy.gif';
-import { Gif } from "../../Styles-Components/apresentacao/apresentacao.js";
+import { Gif } from "../apresentacao/apresentacao";
 
 
 const GifComponente = () =>{

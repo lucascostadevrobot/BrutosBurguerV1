@@ -1,5 +1,5 @@
 import GifLoadingCards from '../../../assets/img/loading-gif-cards.gif'
-import { StyleLoadingCards} from '../../../Styles-Components/LoadingCards/StyleLoadingCards';
+import { StyleLoadingCards} from './StyleLoadingCards';
 function CarregandoCards () {
   return(
 
