@@ -50,8 +50,12 @@ export const StyledContainerFormulario = styled.form`
     margin-top: 20px;
     }
 
-    img{
-         margin-left: 80px;
-        width: 50px;
+    
+
+form img{
+  width: 400px;    /* ajuste o tamanho conforme seu layout */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     }
 `;
