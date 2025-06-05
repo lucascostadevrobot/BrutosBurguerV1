@@ -21,8 +21,14 @@ public class DadosBurguerService {
 
 
     //Salva nossos dados da Entidade DadosBurguer
-    public DadosBurguerEntity save(DadosBurguerEntity dadosBurguerEntity){
-        return exibirDadosBurguerRepository.save(dadosBurguerEntity);
+    public ResponseEntity<DadosBurguerEntity> save(DadosBurguerEntity dadosBurguerEntity){
+        if(dadosBurguerEntity != null){
+            exibirDadosBurguerRepository.save(dadosBurguerEntity);
+            return status(HttpStatus.OK).body(dadosBurguerEntity);
+        }else {
+            return status(HttpStatus.NOT_FOUND).body(null);
+        }
+
     }
 
     //Lista nossos dados da Entidade DadosBurguer

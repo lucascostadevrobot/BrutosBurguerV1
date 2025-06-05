@@ -29,8 +29,13 @@ function FormularioCadastroCardHamburguer() {
 
             });
 
+
+            if (!response.ok) {
+                alert(`Erro ao cadastrar: ${response.status} - ${response.statusText}`);
+                return false;
+            }
             const data = await response.json();
-            console.log(data); // Verifica o retorno da API
+            return true;
         } catch (e) {
             console.log("Erro: Sua API não está funcionando", e);
         }
@@ -44,9 +49,9 @@ function FormularioCadastroCardHamburguer() {
     }, [envioDadosHamburguerApi]);
 
 
-     /**
-   * [Linha] - Botões inferiores do alert dialog que aparece ao utilizar formulario de cadastro.
-   */
+    /**
+  * [Linha] - Botões inferiores do alert dialog que aparece ao utilizar formulario de cadastro.
+  */
     const botoesInferioresDialog = (
         <div>
             <Button label="Ok!" icon="pi pi-check" onClick={() => setVisible(false)} autoFocus />
@@ -67,7 +72,7 @@ function FormularioCadastroCardHamburguer() {
 
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); // Previne o comportamento padrão de submit (recarregar a página)
 
         if ((!envioDadosHamburguerApi.titulo_burguer && !envioDadosHamburguerApi.descricao_burguer)
@@ -77,10 +82,17 @@ function FormularioCadastroCardHamburguer() {
             setVisible(true);
 
         } else {
-            enviaDadosFormularioApi(); // Envia os dados para a API
-            setFormularioPreenchido(true);
-            setPosition(position);
-            setVisible(true);
+            const sucessoPromisse = await enviaDadosFormularioApi();
+            if (sucessoPromisse) {
+                setFormularioPreenchido(true);
+                setPosition(position);
+                setVisible(true);
+            } else {
+                setFormularioPreenchido(null);
+                setVisible(false);
+                alert("API (Application Programming Interface) não está funcionando, contate um administrador.")
+            }
+
         }
     }
 
@@ -110,7 +122,7 @@ function FormularioCadastroCardHamburguer() {
                 <button type="submit">Cadastrar</button>
             </form>
 
-           
+
             {!formularioPreenchido ? (
                 <Dialog header="Opps!!" visible={visible} position={position} style={{ width: '50vw' }}
                     onHide={() => {

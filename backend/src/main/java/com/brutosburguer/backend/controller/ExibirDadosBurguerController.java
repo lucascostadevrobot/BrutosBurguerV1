@@ -22,7 +22,7 @@ public class ExibirDadosBurguerController {
     @CrossOrigin("/**")
     @RequestMapping(value = "/cadastrarBurguer", method = RequestMethod.POST)
     public ResponseEntity<DadosBurguerEntity> saveAll (@RequestBody  DadosBurguerEntity dadosBurguerEntity){
-        return ResponseEntity.status(HttpStatus.CREATED).body(dadosBurguerService.save(dadosBurguerEntity));
+        return ResponseEntity.status(HttpStatus.CREATED).body(dadosBurguerService.save(dadosBurguerEntity).getBody());
 
 
     }
