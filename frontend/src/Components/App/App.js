@@ -16,12 +16,12 @@ function App() {
 
   return (
 
-    <BrowserRouter> {/* Envolve toda a aplicação com BrowserRouter | Diz que usaremos o conceito das Rotas*/}
+    <BrowserRouter>
       <ThemeContext.Provider value={themes.primaryColor}>
         <EstilizacaoGlobalBody>
           <NavBar />
 
-          {/* Definindo as rotas da  aplicação */}
+      
           <Routes>
             <Route path="/" element={
               <>
