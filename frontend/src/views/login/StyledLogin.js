@@ -5,7 +5,7 @@ export const StyledContainerFormulario = styled.form`
     height: 100%;
     padding: 40px;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(206, 206, 206);
 
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ export const StyledContainerFormulario = styled.form`
     justify-content: center;
     }
 
-    span{
-        
+    a{
+    font-size: 15px;
     }
 `;

@@ -26,7 +26,7 @@ const Login = () => {
                             name='password'
                             placeholder='Senha'></input>
                         <BotaoPadraoHover>Entrar</BotaoPadraoHover>
-                        <span>Esqueceu a senha?</span>
+                       <a href='https://github.com/lucascostadevrobot'>Esqueceu a senha?</a>
                     </FormGroup>
 
                 </StyledContainerFormulario>

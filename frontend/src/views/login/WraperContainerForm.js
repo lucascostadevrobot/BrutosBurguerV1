@@ -7,5 +7,5 @@ export const WrapperContainer = styled.div`
   gap: 1rem; /* Espaço entre o formulário e a imagem */
   padding: 40px;
   margin-top: 50px;
-  background-color: blueviolet;
+  
 `;

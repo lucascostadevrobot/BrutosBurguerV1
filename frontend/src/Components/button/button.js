@@ -11,7 +11,7 @@ export const BotaoPadraoHover = styled.button`
     padding: 5px;
     border: 2px;
     box-shadow: 0px 0.3rem 0px #dcdcdc;
-    margin-left: 10px;
+    margin-left: 2px;
     margin-top: 20px;
 
     //Inicialização dos efeitos com Hover
