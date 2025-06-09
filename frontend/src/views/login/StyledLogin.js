@@ -5,7 +5,7 @@ export const StyledContainerFormulario = styled.form`
     height: 100%;
     padding: 40px;
     margin: auto;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(221 221 221);
 
     display: flex;
     align-items: center;
