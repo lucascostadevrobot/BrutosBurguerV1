@@ -14,13 +14,15 @@ export const StyledContainerFormulario = styled.form`
     
     gap: 1rem;
     border-radius: 10px;
-   
+
+
     label{
       
         color: black;
         font-size: 20px;
         font-weight: bold;
     }
+
     input{
     padding: 20px;
     width: auto;
@@ -33,7 +35,7 @@ export const StyledContainerFormulario = styled.form`
     }
 
      img{
-    width: 438px;
+    width: 438px !important;
     height: auto;
     display: flex;
     align-items: center;
@@ -42,5 +44,29 @@ export const StyledContainerFormulario = styled.form`
 
     a{
     font-size: 15px;
+    }
+
+
+    @media (max-width: 576px){
+    width: auto;
+    height: 100%;
+    padding: 40px;
+    margin: auto;
+    background-color: rgb(221 221 221);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    gap: 1rem;
+    border-radius: 10px;
+     }
+    img{
+    width: 238px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 `;
