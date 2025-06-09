@@ -2,6 +2,8 @@ import { StyleFormularioCadastroCardBurguer } from '../formulario-cadastro-burgu
 import { useState, useEffect } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
+import { BotaoPadraoHover } from '../../button/button.js'
+
 
 function FormularioCadastroCardHamburguer() {
 
@@ -119,7 +121,7 @@ function FormularioCadastroCardHamburguer() {
                     value={envioDadosHamburguerApi.descricao_burguer}
                     onChange={handleChange}
                 />
-                <button type="submit">Cadastrar</button>
+                <BotaoPadraoHover type="submit">Cadastrar</BotaoPadraoHover>
             </form>
 
 
