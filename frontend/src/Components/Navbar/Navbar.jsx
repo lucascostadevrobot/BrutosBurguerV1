@@ -9,6 +9,7 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import {Navbar} from './navbar'
 
+
 function ComponenteNavBar() {
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
