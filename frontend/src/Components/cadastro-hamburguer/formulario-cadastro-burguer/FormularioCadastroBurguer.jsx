@@ -7,7 +7,9 @@ import { BotaoPadraoHover } from '../../button/button.js'
 
 function FormularioCadastroCardHamburguer() {
 
-    const BASE_URL = 'http://localhost:8090/api/v1/dadosCardsBurguer/cadastrarCardsBurguer';
+    //production =https://brutosburguerv1.onrender.com/api/v1/dadosCardsBurguer/cadastrarCardsBurguer
+    //dev = http://localhost:8090/api/v1/dadosCardsBurguer/cadastrarCardsBurguer
+    const BASE_URL = 'https://brutosburguerv1.onrender.com/api/v1/dadosCardsBurguer/cadastrarCardsBurguer';
     const [envioDadosHamburguerApi, setenvioDadosHamburguerApi] = useState({
         titulo_burguer: '',
         descricao_burguer: ''

@@ -10,7 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 
 function HamburguerCards() {
-    const BASE_URL = 'http://localhost:8090/api/v1/dadosCardsBurguer/listarCardsDadosBurguer';
+    //production = https://brutosburguerv1.onrender.com/api/v1/dadosCardsBurguer/listarDadosCardsBurguer
+    //deve = http:// /api/v1/dadosCardsBurguer/listarCardsDadosBurguer
+    const BASE_URL = 'https://brutosburguerv1.onrender.com/api/v1/dadosCardsBurguer/listarDadosCardsBurguer';
     const [dadosApiBurguers, setDadosApiBurguers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [loadingMessage, setLoadingMessage] = useState("Carregando...");
