@@ -14,7 +14,8 @@ function ComponenteNavBar() {
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
-
+ 
+  /**Original */
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
