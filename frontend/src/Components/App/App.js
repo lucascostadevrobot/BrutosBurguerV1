@@ -20,8 +20,6 @@ function App() {
     <ThemeContext.Provider value={themes.primaryColor}>
       <EstilizacaoGlobalBody>
         <ComponenteNavBar />
-
-
         <Routes>
           <Route path="/" element={
             <>
