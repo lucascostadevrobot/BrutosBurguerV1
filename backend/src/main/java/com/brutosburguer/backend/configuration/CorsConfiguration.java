@@ -11,8 +11,8 @@ public class CorsConfiguration implements WebMvcConfigurer {
     //.allowedOrigins("http://localhost:3000/") desenvolvimento
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-                 registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000/")
+        registry.addMapping("/**")
+                .allowedOrigins("https://brutos-burguer-v1.vercel.app/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*");
     }
