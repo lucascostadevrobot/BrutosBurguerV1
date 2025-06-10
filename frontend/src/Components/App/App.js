@@ -4,7 +4,7 @@ import Header from '../header/header.jsx';
 import GifComponente from '../apresentacao/apresentacao.jsx';
 import Footer from '../footer/footer.jsx';
 import HamburguerCards from '../HambuguerCards/HamburguerCards.jsx';
-import NavBar from '../../Components/navbar/navbar.jsx';
+import ComponenteNavBar from '../navbar/navbar.jsx';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Login from '../../views/login/index.js'
 import { ThemeContext, themes } from '../../Styles-Components/Themes/ThemeContext.js'
@@ -19,7 +19,7 @@ function App() {
   return (
     <ThemeContext.Provider value={themes.primaryColor}>
       <EstilizacaoGlobalBody>
-        <NavBar />
+        <ComponenteNavBar />
 
 
         <Routes>
