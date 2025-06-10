@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 
 function HamburguerCards() {
-    const BASE_URL = 'http://localhost:8090/api/v1/dadosBurguer/listarDadosBurguer';
+    const BASE_URL = 'http://localhost:8090/api/v1/dadosCardsBurguer/listarCardsDadosBurguer';
     const [dadosApiBurguers, setDadosApiBurguers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [loadingMessage, setLoadingMessage] = useState("Carregando...");

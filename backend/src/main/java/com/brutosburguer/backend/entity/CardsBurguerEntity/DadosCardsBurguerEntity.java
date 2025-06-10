@@ -1,4 +1,4 @@
-package com.brutosburguer.backend.entity;
+package com.brutosburguer.backend.entity.CardsBurguerEntity;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-public class DadosBurguerEntity {
+public class DadosCardsBurguerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
