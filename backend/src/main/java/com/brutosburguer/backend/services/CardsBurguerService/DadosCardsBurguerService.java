@@ -46,7 +46,7 @@ public class DadosCardsBurguerService {
      * Se no Dashboard de administração quiser atualizar os dados pelo front, basta criarmos um campo
      * passando os valores do banco de dados, esses valores seriam um input ou spinner com os Ids.
      * */
-    public ResponseEntity<DadosCardsBurguerEntity> putAll (@PathVariable Long id, @RequestBody DadosCardsBurguerEntity dadosCardsBurguerEntity){
+    public ResponseEntity<DadosCardsBurguerEntity> putAll (Long id, DadosCardsBurguerEntity dadosCardsBurguerEntity){
         Optional<DadosCardsBurguerEntity> dadosExistente = exibirDadosCardsBurguerRepository.findById(id);
         if (dadosExistente.isPresent()){
             DadosCardsBurguerEntity dadosAtualizado =  dadosExistente.get();

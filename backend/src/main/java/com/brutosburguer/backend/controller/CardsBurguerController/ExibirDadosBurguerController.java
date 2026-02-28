@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/dadosCardsBurguer")
+@RequestMapping("/api/v1/dadosCardsBurguer")
 public class ExibirDadosBurguerController {
-    @Autowired
-    private ExibirDadosCardsBurguerRepository exibirDadosCardsBurguerRepository;
+
     @Autowired
     private DadosCardsBurguerService dadosCardsBurguerService;
 

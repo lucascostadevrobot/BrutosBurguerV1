@@ -4,7 +4,7 @@ services:
 
   postgres:
     image: postgres:15
-    container_name: postgres_db
+    container_name: postgres_db_brutos
     restart: always
     environment:
       POSTGRES_DB: db_brutosBurger
@@ -14,14 +14,20 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   backend:
     build: ./backend
-    container_name: spring_backend
+    container_name: spring_backend_brutos
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     ports:
-      - "8090:8090"
+      - "8090:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/db_brutosBurger
       SPRING_DATASOURCE_USERNAME: postgres
@@ -29,7 +35,7 @@ services:
 
   frontend:
     build: ./frontend
-    container_name: react_frontend
+    container_name: react_frontend_brutos
     ports:
       - "3000:3000"
     stdin_open: true
