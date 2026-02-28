@@ -31,9 +31,11 @@ function App() {
           <Route path="/login" element={
             <Login />
           } />
-          <Route path="/CadastroHamburguer" element={
+          {/*
+            *TODO aplicar quando ROLES no back-end estiver configurado. Não deixar visivel na rotal raiz "/"
+            *<Route path="/CadastroHamburguer" element={
             <CadastroHamburguer />
-          } />
+          } />*/}
         </Routes>
       </EstilizacaoGlobalBody>
       {localizacaoFooter.pathname !== "/login" && <Footer />}

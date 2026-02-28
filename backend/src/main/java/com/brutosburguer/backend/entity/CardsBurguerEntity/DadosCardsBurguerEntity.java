@@ -1,48 +1,27 @@
 package com.brutosburguer.backend.entity.CardsBurguerEntity;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "DadosBurguer")
+@Table(name = "tb_dadosCardsBurguers")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 public class DadosCardsBurguerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_dados_cards_burguer")
     private Long id;
     //TODO configuar nome da coluna
-    @JsonProperty("titulo_burguer")
+    @Column(name = "titulo_burguer")
     private String tituloBurguer;
-    @JsonProperty("descricao_burguer")
+    @Column(name = "descricao_burguer")
     private String descricaoBurguer;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTituloBurguer() {
-        return tituloBurguer;
-    }
-
-    public void setTituloBurguer(String tituloBurguer) {
-        this.tituloBurguer = tituloBurguer;
-    }
-
-    public String getDescricaoBurguer() {
-        return descricaoBurguer;
-    }
-
-    public void setDescricaoBurguer(String descricaoBurguer) {
-        this.descricaoBurguer = descricaoBurguer;
-    }
 }
