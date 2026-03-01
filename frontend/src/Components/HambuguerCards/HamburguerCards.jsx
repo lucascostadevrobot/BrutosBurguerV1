@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 function HamburguerCards() {
     //production = https://brutosburguerv1.onrender.com/api/v1/dadosCardsBurguer/listarDadosCardsBurguer
     //deve = http:// /api/v1/dadosCardsBurguer/listarCardsDadosBurguer
-    const BASE_URL = 'http://localhost:8090/api/v1/dadosCardsBurguer/listarCardsDadosBurguer';
+    const BASE_URL = 'http://localhost:8090/api/v1/dadosCardsBurguer/listarDadosCardsBurguer';
     const [dadosApiBurguers, setDadosApiBurguers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [loadingMessage, setLoadingMessage] = useState("Carregando...");
@@ -53,8 +53,8 @@ function HamburguerCards() {
         return (
             <CardContainer style={{ width: '18rem' }}>
                 <ImagemCard src={imageCardFriboi}></ImagemCard>
-                <TituloBurguerCard>{dadosApiBurguers.titulo_burguer}</TituloBurguerCard>
-                <DescricaoBurguerCard>{dadosApiBurguers.descricao_burguer}</DescricaoBurguerCard>
+                <TituloBurguerCard>{dadosApiBurguers.tituloBurguer}</TituloBurguerCard>
+                <DescricaoBurguerCard>{dadosApiBurguers.descricaoBurguer}</DescricaoBurguerCard>
                 <BotaoCard></BotaoCard>
             </CardContainer>
         );

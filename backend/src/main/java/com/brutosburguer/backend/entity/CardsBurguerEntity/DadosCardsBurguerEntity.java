@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tb_dadosCardsBurguers")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,6 +12,7 @@ import lombok.*;
 @Setter
 @ToString
 @EqualsAndHashCode
+@Table(name = "dados_cards_burguer_entity")
 public class DadosCardsBurguerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

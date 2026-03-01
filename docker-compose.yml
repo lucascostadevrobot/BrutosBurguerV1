@@ -7,7 +7,7 @@ services:
     container_name: postgres_db_brutos
     restart: always
     environment:
-      POSTGRES_DB: db_brutosBurger
+      POSTGRES_DB: db_brutosburger
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
     ports:
@@ -29,9 +29,10 @@ services:
     ports:
       - "8090:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/db_brutosBurger
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/db_brutosburger
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: admin123
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
 
   frontend:
     build: ./frontend

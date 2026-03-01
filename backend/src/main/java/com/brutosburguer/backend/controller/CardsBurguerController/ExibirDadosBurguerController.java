@@ -43,10 +43,4 @@ public class ExibirDadosBurguerController {
     public ResponseEntity<DadosCardsBurguerEntity> deleteId(@PathVariable Long id){
         return dadosCardsBurguerService.deleteId(id);
     }
-
-    //Metodo Controller para testes inciais retornando uma String
-    @GetMapping("/exibirDadosCardsBurguer")
-    public String exibindoDadosBurguer(){
-        return "Hello Word";
-    }
 }
