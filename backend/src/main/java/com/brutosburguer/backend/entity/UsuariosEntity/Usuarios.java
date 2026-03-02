@@ -22,6 +22,11 @@ public class Usuarios {
     @Column(unique = true, name = "nome_usuario")
     private String nomeUsuario;
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "tb_usuarios_roles",
+            joinColumns = @JoinColumn(name = "id_usuario"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
     private Set<Role> roleSet;
 }
