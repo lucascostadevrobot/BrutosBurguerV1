@@ -3,6 +3,9 @@ package com.brutosburguer.backend.entity.UsuariosEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.rmi.server.UID;
+import java.util.Set;
+
 @Entity
 @Table(name = "tb_usuarios")
 @Builder
@@ -10,16 +13,14 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
 public class Usuarios {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id_usuario")
-    private Long id;
-    @Column(name = "nome")
-    private String nome;
+    private UID id;
     @Column(name = "nomeDeUsuario")
     private String nomeUsuario;
     private String password;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Role> roleSet;
 }
