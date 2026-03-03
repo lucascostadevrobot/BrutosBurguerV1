@@ -3,7 +3,6 @@ package com.brutosburguer.backend.entity.UsuariosEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.rmi.server.UID;
 import java.util.Set;
 import java.util.UUID;
 

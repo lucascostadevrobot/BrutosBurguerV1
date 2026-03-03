@@ -1,12 +1,9 @@
 package com.brutosburguer.backend.repository.UsuariosRepository;
 
-import com.brutosburguer.backend.entity.UsuariosEntity.Usuarios;
+import com.brutosburguer.backend.entity.UsuariosEntity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface UsuariosRepository  extends JpaRepository <Usuarios, UUID> {
-
+public interface RoleRepository extends JpaRepository<Role, Long> {
 }

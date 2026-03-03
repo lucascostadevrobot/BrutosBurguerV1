@@ -13,7 +13,6 @@ import lombok.*;
 @Getter
 @Setter
 public class Gerente extends Usuarios {
-    private String nome;
     private String cpf;
     private boolean ativo;
 }
