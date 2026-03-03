@@ -13,6 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Getter
 @Setter
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
