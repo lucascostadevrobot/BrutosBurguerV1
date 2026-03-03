@@ -7,7 +7,6 @@ import lombok.*;
 
 @Entity
 @Table(name = "tb_gerentes")
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
