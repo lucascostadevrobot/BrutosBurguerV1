@@ -20,6 +20,7 @@ public class SecurityConfig {
      * -Autorização: Após saber quem é o usuário, ele verifica se esse usuário tem permissão (Role) para acessar aquele recurso específico.
      * -Proteção contra Ataques: Já vem configurado para barrar ataques comuns, como CSRF (Cross-Site Request Forgery) e adicionar headers de segurança (como o CORS).
      *
+     * ->Após essa configuração macro do JWT, precisa-se definir o conceito de chave-publica e chave-privada
      */
     @Bean
     private SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -28,7 +29,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) //Desabilitar apenas localmente
                 .oauth2ResourceServer(httpSecurityOAuth2ResourceServerConfigurer -> httpSecurityOAuth2ResourceServerConfigurer.jwt(Customizer.withDefaults()))
                 //TODO finalizar metodo SecurityFilterChain nao esta em produto, portanto não quebra
-                .sessionManagement(httpSecuritySessionManagementConfigurer -> httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(httpSecuritySessionManagementConfigurer -> httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
 
         return httpSecurity.build();
